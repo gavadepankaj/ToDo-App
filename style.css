@@ -19,11 +19,18 @@ textarea {
     padding: 8px;
     margin: 6px 0;
 }
-    
+
 button {
     padding: 10px;
     width: 100%;
     background: #007bff;
+    color: white;
+    border: none;
+}
+.delete-btn {
+    padding: 10px;
+    width: 100%;
+    background: #a53823d0;
     color: white;
     border: none;
 }

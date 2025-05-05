@@ -42,7 +42,7 @@ function deleteTask(index) {
     tasks.splice(index, 1);
     localStorage.setItem("tasks", JSON.stringify(tasks));
     renderTasks();
-    showToast("🗑️ Task Deleted");
+    showToast("Task Deleted");
 }
 
 function addTask(title, description) {
