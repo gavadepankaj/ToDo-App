@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle" />
+            🌙 Dark Mode
+        </label>
+        <form id="task-form">
+            <input class="inputs" type="text" id="title" placeholder="Task Title" required />
+            <textarea class="inputs" id="description" placeholder="Task Description (optional)"></textarea>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <br>
+        <select id="filter-tasks">
+            <option value="all">All</option>
+            <option value="incomplete">Incomplete</option>
+            <option value="completed">Completed</option>
+        </select>
+        <div class="tasks-section">
+            <h2>📋 Incomplete Tasks</h2>
+            <div id="incomplete-tasks" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <h2>✅ Completed Tasks</h2>
+            <div id="completed-tasks" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

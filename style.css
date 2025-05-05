@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.inputs,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    background: #007bff;
+    color: white;
+    border: none;
+}
+
+.task-list {
+    min-height: 100px;
+    padding: 10px;
+    background: #eaeaea;
+    margin-bottom: 20px;
+}
+
+.task {
+    background: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    cursor: move;
+}
+
+.toast {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+body.dark {
+    background: #1f1f1f;
+    color: #706b6b;
+}
+
+body.dark .container {
+    background: #2c2c2c;
+}
+
+.theme-switch {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
