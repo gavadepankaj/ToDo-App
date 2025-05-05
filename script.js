@@ -2,7 +2,7 @@ let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 function editTask(index, field, value) {
     tasks[index][field] = value.trim();
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    showToast("✏️ Task Updated");
+    showToast("Task Updated");
 }
 
 function renderTasks() {
@@ -49,7 +49,7 @@ function addTask(title, description) {
     tasks.push({ title, description, completed: false });
     localStorage.setItem("tasks", JSON.stringify(tasks));
     renderTasks();
-    showToast("✅ Task Created");
+    showToast("Task Created");
 }
 
 function drag(ev, index) {
@@ -68,7 +68,7 @@ function drop(ev) {
     tasks[index].completed = isCompleted;
     localStorage.setItem("tasks", JSON.stringify(tasks));
     renderTasks();
-    showToast(isCompleted ? "🔄 Task Moved to Completed" : "🔄 Task Moved to Incomplete");
+    showToast(isCompleted ? " Task Moved to Completed" : " Task Moved to Incomplete");
 }
 
 function showToast(message) {
